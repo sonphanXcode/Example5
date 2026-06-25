@@ -12,8 +12,9 @@ let swiftPackages: String = "SwiftPackages"
 let project = Project(name: appName,
                       packages: [
                         .package(url: "https://github.com/SwiftfulThinking/SwiftfulRouting.git", .exact(.init(5, 3, 6))),
-                        .package(path: "\(swiftPackages)/NavigationRouter"),
-                        .package(path: "\(swiftPackages)/S7DI")
+                        .package(path: "\(swiftPackages)/Exp5_NavigationRouting"),
+                        .package(path: "\(swiftPackages)/Exp5_DI"),
+                        .package(path: "\(swiftPackages)/Exp5_Network")
                       ],
                       settings: Settings.settings(configurations: makeConfiguration()),
                       targets: [
@@ -28,7 +29,8 @@ let project = Project(name: appName,
                                 dependencies: [
                                     .package(product: "SwiftfulRouting"),
                                     .package(product: "NavigationRouter"),
-                                    .package(product: "S7DI")
+                                    .package(product: "S7DI"),
+                                    .package(product: "Exp5_Network")
                                 ],
                                 settings: makeBaseSetting()
                                 
